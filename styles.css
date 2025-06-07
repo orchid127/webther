@@ -1,0 +1,9 @@
+html {
+    background-color: #DBF4FF;
+    color: #4AC9FF
+}
+
+#searchbar {
+    border: solid 1px #009ADD;
+    border-radius: 10em;
+}
