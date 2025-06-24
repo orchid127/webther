@@ -2,13 +2,25 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles.css">
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link rel="stylesheet" href="./styles.css">
     <title>Webther</title>
   </head>
   <body>
-    <h2>Paris - 17:55</h2>
-    <h1>18°C</h1>
-    <input type="search" placeholder="Search..." id="searchbar" name="searchbar">
+    <div class="content">
+      <p id="currCity">Paris</p>
+    </div>
+    <div>
+      <p id="currTemp">18°C</p>
+    </div>
+
+    <div class="content">
+      <input type="search" placeholder="Search..." id="searchbar" name="searchbar">
+      <button type="submit" onclick="getCurrentWeather()">Enter</button>
+    </div>
   </body>
-  <script src="renderer.js"></script>
+  <script src="./renderer.js"></script>
 </html>
