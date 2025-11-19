@@ -8,3 +8,10 @@ I wanted to discover web app developpement, so I tried Electron.
 ## Current look
 
 ![Current look](/version-1.png)
+
+## To do list
+
+- [ ] redesign the app
+- [ ] fix search bar
+- [ ] make the custom title bar functional
+- [ ] deploy app
