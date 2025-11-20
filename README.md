@@ -13,7 +13,8 @@ Electron is a framework that is used for desktop applications like Discord, so I
 
 ## To do list
 
-- [ ] redesign the app
-- [ ] fix search bar
+- [x] redesign the app
+- [ ] configure API
+- [ ] fix resizing issues
 - [ ] make the custom title bar functional
 - [ ] deploy app

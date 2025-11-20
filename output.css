@@ -268,6 +268,9 @@
   .text-\[\#0206EB\] {
     color: #0206EB;
   }
+  .\[-webkit-app-region\:drag\] {
+    -webkit-app-region: drag;
+  }
   .focus\:outline-none {
     &:focus {
       --tw-outline-style: none;
