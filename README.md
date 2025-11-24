@@ -14,7 +14,7 @@ Electron is a framework that is used for desktop applications like Discord, so I
 ## To do list
 
 - [x] redesign the app
-- [ ] configure API
+- [x] configure API
 - [ ] fix resizing issues
 - [ ] make the custom title bar functional
 - [ ] deploy app

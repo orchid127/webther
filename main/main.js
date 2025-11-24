@@ -1,5 +1,7 @@
 const { app, BrowserWindow, ipcMain } = require('electron/main')
-const path = require('node:path')
+const path = require('node:path');
+require('dotenv').config();
+
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -8,13 +10,14 @@ const createWindow = () => {
     frame: true,
     resizable: false,
     titleBarStyle: 'hidden',
+    contextIsolation: true,
     //...(process.platform !== 'darwin' ? { titleBarOverlay: true } : {}),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
   })
 
-  win.loadFile('index.html')
+  win.loadFile(path.join(__dirname, '../src/index.html'))
 }
 
 app.on('window-all-closed', () => {
@@ -32,9 +35,9 @@ app.whenReady().then(() => {
   })
 })
 
-require('dotenv').config();
-const API_KEY = process.env.OPEN_WEATHER_API_KEY;
 
 ipcMain.handle('get-api-key', async () => {
-  return API_KEY;
+  return process.env.WEATHER_API_KEY;
 });
+
+console.log(process.env.WEATHER_API_KEY);
