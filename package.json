@@ -1,34 +1,36 @@
 {
   "name": "webther",
   "version": "1.0.0",
-  "description": "",
+  "description": "a simple yet cute weather app",
   "license": "ISC",
   "author": "orchid127",
   "type": "commonjs",
-  "main": "./main/main.js",
+  "main": "main/main.js",
   "scripts": {
     "start": "electron-forge start",
     "watch:css": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "publish": "node -r dotenv/config node_modules/.bin/electron-forge publish"
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.10.2",
     "@electron-forge/maker-deb": "^7.10.2",
     "@electron-forge/maker-rpm": "^7.10.2",
-    "@electron-forge/maker-squirrel": "^7.10.2",
     "@electron-forge/maker-zip": "^7.10.2",
     "@electron-forge/plugin-auto-unpack-natives": "^7.10.2",
     "@electron-forge/plugin-fuses": "^7.10.2",
     "@electron-forge/publisher-github": "^7.10.2",
     "@electron/fuses": "^1.8.0",
+    "dotenv": "^17.2.3",
     "electron": "^36.9.5",
+    "electron-installer-debian": "^3.0.0",
+    "electron-installer-redhat": "^3.4.0",
     "tailwindcss": "^4.1.17"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.17",
-    "dotenv": "^16.5.0",
-    "electron-squirrel-startup": "^1.0.1"
+    "node": "^20.19.6"
   }
 }

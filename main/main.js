@@ -29,7 +29,7 @@ app.disableHardwareAcceleration();
 app.whenReady().then(() => {
   ipcMain.handle('ping', () => 'pong')
   createWindow()
-  
+
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
@@ -39,5 +39,3 @@ app.whenReady().then(() => {
 ipcMain.handle('get-api-key', async () => {
   return process.env.WEATHER_API_KEY;
 });
-
-console.log(process.env.WEATHER_API_KEY);
